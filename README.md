@@ -27,7 +27,7 @@ This portfolio documents architecture patterns that prioritize stability, clarit
 ## Architecture Domains Covered
 
 ### 🔐 Active Directory Multi-Site Architecture
-Location: [`/active-directory-multisite`](./active-directory-multisite)
+Location: [active-directory-multisite](./active-directory-multisite)
 
 Design goals:
 
@@ -50,7 +50,7 @@ Includes:
 ---
 
 ### 💾 Veeam On-Prem Enterprise Deployment
-Location: [`/veeam-onprem-deployment`](./veeam-onprem-deployment)
+Location: [veeam-onprem-deployment](./veeam-onprem-deployment)
 
 Design goals:
 
@@ -73,7 +73,7 @@ Backups are considered valid only after restore testing confirms integrity.
 ---
 
 ### ⚙ Puppet Enterprise Migration Strategy
-Location: [`/puppet-enterprise-migration`](./puppet-enterprise-migration)
+Location: [puppet-enterprise-migration](./puppet-enterprise-migration)
 
 Design goals:
 
@@ -93,7 +93,7 @@ Includes:
 ---
 
 ### 🖥 Windows Infrastructure Stabilization Plan
-Location: [`/windows-infrastructure-stabilization`](./windows-infrastructure-stabilization)
+Location: [windows-infrastructure-stabilization](./windows-infrastructure-stabilization)
 
 Design goals:
 
@@ -114,7 +114,7 @@ Includes:
 ---
 
 ### 🧪 Disaster Recovery & Failure Testing Framework
-Location: [`/disaster-recovery-testing`](./disaster-recovery-testing)
+Location: [disaster-recovery-testing](./disaster-recovery-testing)
 
 Design goals:
 
