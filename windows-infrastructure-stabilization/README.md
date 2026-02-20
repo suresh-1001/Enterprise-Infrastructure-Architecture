@@ -14,7 +14,7 @@ The objective is to:
 - Ensure identity reliability
 - Integrate monitoring discipline
 
-Windows infrastructure must be predictable, observable, and recoverable.
+Windows infrastructure must be predictable, observable, and recoverable. Stabilization begins with visibility and ends with governance.
 
 ---
 
@@ -165,6 +165,19 @@ Stability is achieved through measurement, not assumptions.
 
 ---
 
+## Risk Prioritization Model
+
+Windows stabilization efforts should prioritize:
+
+1. Identity availability (AD, DNS, Kerberos)
+2. Replication health and time synchronization
+3. Backup and restore validation
+4. Patch compliance and rollback readiness
+5. Service account governance
+
+Operational work should focus on reducing the highest blast-radius risks first.
+
+---
 ## Design Principles
 
 Windows infrastructure governance must prioritize:
