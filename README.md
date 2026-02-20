@@ -10,7 +10,7 @@ It represents structured design thinking for production infrastructure.
 ---
 
 ## Executive Overview
-
+![Enterprise Infrastructure Overview](./diagrams/enterprise-infrastructure-overview.png)
 Modern enterprise infrastructure must support:
 
 - Multi-site identity architectures
