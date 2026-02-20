@@ -114,7 +114,7 @@ Includes:
 ---
 
 ### 🧪 Disaster Recovery & Failure Testing Framework
-Location: `/disaster-recovery-testing`
+Location: [`/disaster-recovery-testing`](./disaster-recovery-testing)
 
 Design goals:
 
