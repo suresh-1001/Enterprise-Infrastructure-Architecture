@@ -68,7 +68,45 @@ Open Source Puppet is suitable for small environments but lacks governance depth
 - Predictable catalog compilation
 
 ---
+---
 
 ## Environment Structure (r10k / Code Manager)
 
-Recommended structure:
+Recommended control-repo layout:
+
+```
+control-repo/
+├── Puppetfile
+├── manifests/
+│   └── site.pp
+├── data/
+│   ├── common.yaml
+│   ├── environment/
+│   └── role/
+└── modules/
+```
+
+### Deployment Model
+
+- Git-backed control repo
+- Code Manager handles environment sync
+- PR-based approval workflow
+- Promotion model (dev → stage → prod)
+
+Changes must not be pushed directly to production.
+
+---
+## Certificate & Identity Realignment Strategy
+---
+## Rollout Sequencing Strategy
+---
+## Drift Detection & Observability
+---
+## Failure Mode Analysis
+---
+## Rollback Strategy
+---
+## Governance Model
+---
+## Design Principles
+---
