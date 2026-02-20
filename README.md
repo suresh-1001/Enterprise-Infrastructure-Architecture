@@ -1,104 +1,185 @@
 # Enterprise Infrastructure Architecture Portfolio
 
-This repository documents enterprise-grade infrastructure design patterns used in regulated, high-availability environments.
+This repository documents enterprise infrastructure architecture patterns designed for regulated, high-availability environments operating primarily on-premises.
 
-Focus Areas:
+The designs focus on identity consolidation, backup resilience, configuration governance, and operational survivability under failure conditions.
 
-- Active Directory multi-site resiliency
-- On-prem VMware + NetApp + Veeam backup architecture
-- Puppet Enterprise migration strategy
-- Windows infrastructure stabilization
-- Disaster recovery testing methodology
-
-The designs here prioritize stability, operational clarity, and resilient infrastructure.
+This is not a lab collection.  
+It represents structured design thinking for production infrastructure.
 
 ---
 
-## 🏗 Architecture Domains Covered
+## Executive Overview
 
-### 🔐 Active Directory Multi-Site Design
+Modern enterprise infrastructure must support:
+
+- Multi-site identity architectures
+- WAN-failure resilience
+- On-prem virtualization stacks
+- Backup validation discipline
+- Configuration management governance
+- Regulated workload controls (PCI / SOC environments)
+
+This portfolio documents architecture patterns that prioritize stability, clarity, and recoverability over complexity.
+
+---
+
+## Architecture Domains Covered
+
+### 🔐 Active Directory Multi-Site Architecture
 Location: `/active-directory-multisite`
 
-Covers:
-- Single forest consolidation strategy
-- Site-aware Domain Controller placement
-- RODC vs Writable DC tradeoffs
-- WAN failure survivability
-- Badge system authentication resilience
-- Migration playbook for domain consolidation
+Design goals:
+
+- Consolidate multiple identity domains into a unified forest
+- Preserve office-level autonomy during WAN outages
+- Support badge-based local authentication
+- Minimize replication latency and cross-site risk
+- Define RODC vs Writable DC placement strategy
+- Provide migration playbook for domain consolidation
+
+Includes:
+
+- Forest and domain strategy
+- AD Sites & Services topology design
+- Replication health monitoring framework
+- Failure mode analysis
+- WAN outage survivability model
+- Migration sequencing approach
 
 ---
 
-### 💾 Veeam On-Prem Deployment Blueprint
+### 💾 Veeam On-Prem Enterprise Deployment
 Location: `/veeam-onprem-deployment`
 
-Covers:
-- VMware transport modes (HotAdd, NBD, Direct SAN)
+Design goals:
+
+- Implement measurable, testable backup strategy
+- Integrate VMware + NetApp + Veeam cleanly
+- Enforce restore validation discipline
+- Align RPO/RTO objectives with operational testing
+
+Includes:
+
 - Proxy and repository sizing strategy
-- Application-aware processing
-- NetApp snapshot alignment
-- Restore validation methodology
-- DR testing approach
+- VMware transport mode selection (HotAdd / NBD / Direct SAN)
+- Application-aware processing configuration
+- NetApp snapshot coordination
+- Restore scenario validation methodology
+- DR simulation and RTO measurement framework
+
+Backups are considered valid only after restore testing confirms integrity.
 
 ---
 
 ### ⚙ Puppet Enterprise Migration Strategy
 Location: `/puppet-enterprise-migration`
 
-Covers:
-- Open Source → PE migration considerations
+Design goals:
+
+- Transition from Open Source Puppet to Puppet Enterprise
+- Standardize Roles & Profiles architecture
+- Enforce Git-based configuration governance
+- Realign hostnames and domain structures cleanly
+
+Includes:
+
 - r10k / Code Manager structure
-- Roles and Profiles model
-- Certificate re-issuance
-- Domain/hostname realignment planning
+- Certificate re-issuance planning
+- Hiera hierarchy strategy
+- Node classification governance
+- Controlled rollout methodology
 
 ---
 
 ### 🖥 Windows Infrastructure Stabilization Plan
 Location: `/windows-infrastructure-stabilization`
 
-Covers:
-- 30-60-90 day onboarding framework
-- AD health validation (dcdiag / repadmin)
-- DNS and GPO audit
-- Patch governance
-- Monitoring integration
+Design goals:
+
+- Stabilize and audit Windows-based infrastructure
+- Validate Active Directory health
+- Establish patch and GPO governance
+- Integrate monitoring discipline
+
+Includes:
+
+- 30-60-90 day operational onboarding framework
+- AD health checks (dcdiag, repadmin)
+- DNS audit model
+- SYSVOL / DFS-R validation
+- Patch compliance structure
+- Monitoring integration checkpoints
 
 ---
 
-### 🧪 Disaster Recovery Testing Framework
+### 🧪 Disaster Recovery & Failure Testing Framework
 Location: `/disaster-recovery-testing`
 
-Covers:
+Design goals:
+
+- Ensure infrastructure survives realistic failure scenarios
+- Validate restore and failover procedures
+- Measure actual recovery times
+
+Includes:
+
 - AD WAN failure simulation
-- VMware HA validation
-- NetApp failover test methodology
+- VMware HA validation tests
+- NetApp failover methodology
 - Backup restore drills
-- RTO measurement
+- RTO documentation practices
+
+Infrastructure health is proven through testing — not assumed.
 
 ---
 
-## 🎯 Design Philosophy
+## Design Philosophy
 
-The infrastructure patterns documented here follow five principles:
+The infrastructure patterns documented here follow five operational principles:
 
-1. Detect issues before users do
-2. Design for failure, not perfection
-3. Keep architecture simple and governable
-4. Validate restores — backups alone are not enough
-5. Prefer boring, stable systems over trendy complexity
+1. Detect issues before users report them
+2. Design for failure, not ideal conditions
+3. Prefer simple, governable architectures
+4. Validate restores regularly — backups alone are insufficient
+5. Prioritize stable systems over unnecessary complexity
 
----
-
-## 📌 Intended Audience
-
-Infrastructure engineers, architects, and technical leaders operating:
-
-- On-prem VMware environments
-- Hybrid AD deployments
-- Regulated workloads (PCI / SOC)
-- Multi-site enterprise networks
+This approach favors operational reliability over trend-driven engineering.
 
 ---
 
-This portfolio represents structured thinking applied to real-world infrastructure constraints.
+## Intended Audience
+
+This repository is relevant for:
+
+- Infrastructure Engineers
+- Systems Architects
+- Enterprise IT Leads
+- Identity Architects
+- On-Prem Platform Engineers
+- Technical leaders in regulated industries
+
+Particularly environments operating:
+
+- VMware-based virtualization
+- Multi-site Active Directory deployments
+- Hybrid identity models
+- On-prem backup strategies
+- Compliance-bound workloads
+
+---
+
+## Operational Perspective
+
+These documents assume:
+
+- Defined change management
+- Monitoring and alerting integration
+- Documented ownership of infrastructure domains
+- Regular architecture review and failure simulation
+
+Infrastructure must be measurable, testable, and predictable.
+
+---
+
+This portfolio represents structured thinking applied to real-world enterprise constraints.
