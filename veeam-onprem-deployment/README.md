@@ -38,7 +38,15 @@ Core components:
 - **Backup Repository** (primary storage target)
 - **Offsite/DR Repository** (secondary copy; ideally immutable)
 - **NetApp Snapshot Integration** (optional; used intentionally, not blindly)
+---
+## Architecture Diagram
 
+![Veeam Architecture](./diagrams/veeam-architecture-diagram.md)
+
+The diagram illustrates logical backup data flow and repository tiering.
+
+Primary restores occur from the operational repository.
+Secondary copy targets provide site-level survivability and ransomware resilience.
 ---
 
 ## Architecture Decisions
