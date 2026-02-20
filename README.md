@@ -10,7 +10,7 @@ Focus Areas:
 - Windows infrastructure stabilization
 - Disaster recovery testing methodology
 
-The designs here prioritize stability, operational clarity, and failure resilience.
+The designs here prioritize stability, operational clarity, and resilient infrastructure.
 
 ---
 
