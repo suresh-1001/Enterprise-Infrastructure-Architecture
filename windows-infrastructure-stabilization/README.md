@@ -1,6 +1,6 @@
 # Windows Infrastructure Stabilization Plan
 
-![Windows Infrastructure Stabilization](./diagrams/windows-stabilization-banner.png)
+![Windows Infrastructure Stabilization](./diagrams/windows-stabilization-banner.webp)
 
 > *You cannot govern what you have not measured. Stabilization starts with an honest baseline.*
 
