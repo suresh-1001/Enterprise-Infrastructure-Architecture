@@ -1,6 +1,6 @@
 # Veeam On-Premises Enterprise Deployment
 
-![Veeam On-Premises Enterprise Deployment](./diagrams/veeam-banner.png)
+![Veeam On-Premises Enterprise Deployment](./diagrams/veeam-banner.webp)
 
 > *A backup job that has never been tested for restore is not a backup strategy — it is a liability.*
 
