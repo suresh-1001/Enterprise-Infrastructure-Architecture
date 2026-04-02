@@ -1,6 +1,6 @@
 # Active Directory Multi-Site Architecture
 
-![Active Directory Multi-Site Architecture](./diagrams/active-directory-banner.png)
+![Active Directory Multi-Site Architecture](./diagrams/active-directory-banner.webp)
 
 > *Identity infrastructure must survive WAN failure. Design it to operate independently at every site.*
 
