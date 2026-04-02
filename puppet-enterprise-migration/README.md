@@ -1,6 +1,6 @@
 # Puppet Enterprise Migration Strategy
 
-![Puppet Enterprise Migration Strategy](./diagrams/puppet-migration-banner.png)
+![Puppet Enterprise Migration Strategy](./diagrams/puppet-migration-banner.webp)
 
 > *Configuration drift is not a Puppet problem — it is a governance problem. Puppet makes it visible.*
 
